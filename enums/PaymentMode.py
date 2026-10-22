@@ -8,6 +8,6 @@ public enum PaymentMode {
 from enum import Enum
 
 class PaymentMode:
-    Upi="Upi"
-    Cash="Cash"
-    Card="Card"
+    UPI="Upi"
+    CASH="Cash"
+    CARD="Card"

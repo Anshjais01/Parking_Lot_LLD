@@ -10,6 +10,6 @@ public enum PaymentStatus {
 from enum import Enum
 
 class PaymentaMode:
-    Success="Success"
-    Pending="Pending"
-    Failed="Failed"
+    SUCCESS="Success"
+    PENDIG="Pending"
+    FAILED="Failed"
