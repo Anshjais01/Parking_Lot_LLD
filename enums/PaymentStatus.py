@@ -9,7 +9,7 @@ public enum PaymentStatus {
 """
 from enum import Enum
 
-class PaymentaMode:
+class PaymentStatus:
     SUCCESS="SUCCESS"
     PENDIG="PENDING"
     FAILED="FAILED"

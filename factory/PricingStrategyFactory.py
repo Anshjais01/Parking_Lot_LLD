@@ -13,3 +13,19 @@ public class PricingStrategyFactory {
     }
 }
 '''
+
+from ..enums.PricingStrategyType import PriceStrategyType
+from ..strategy.pricing.TimeBasedPricing import TimeBasedPricing
+from ..strategy.pricing.EventBasedPricing import EventBasedPricing
+
+
+class PricingStrategyFactory:
+    @staticmethod
+    def get(pricing_type: str):
+        match pricing_type:
+            case PriceStrategyType.TIME_BASED:
+                return TimeBasedPricing()
+            case PriceStrategyType.EVENT_BASED:
+                return EventBasedPricing()
+            case _:
+                raise ValueError(f"Unknown pricing strategy type: {pricing_type}")
