@@ -14,3 +14,24 @@ public class PaymentStrategyFactory {
     }
 }
 """
+
+from ..enums.PaymentMode import PaymentMode
+from ..strategy.payment.PaymentStrategy import PaymentStrategy
+from ..strategy.payment.CashPayment import CashPayment
+from ..strategy.payment.UpiPayment import UpiPayment
+from ..strategy.payment.CardPayment import CardPayment
+from ..strategy.payment.NetBankingPayment import NetBankingPayment
+
+
+class PaymentStrategyFactory:
+    @staticmethod
+    def get(mode: PaymentMode) -> PaymentStrategy:
+        match mode:
+            case PaymentMode.CASH:
+                return CashPayment()
+            case PaymentMode.UPI:
+                return UpiPayment()
+            case PaymentMode.CARD:
+                return CardPayment()
+            case PaymentMode.NETBANKING:
+                return NetBankingPayment()

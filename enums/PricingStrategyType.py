@@ -8,5 +8,5 @@ public enum PricingStrategyType {
 from enum import Enum
 
 class PriceStrategyType:
-    TIME_BASED="Time Based"
-    EVENT_BASED="Event Based"
+    TIME_BASED="TIME_BASED"
+    EVENT_BASED="EVENT_BASED"

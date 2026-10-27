@@ -8,6 +8,6 @@ public enum VehicleType {
 from enum import Enum
 
 class VehicleType:
-    CAR="Car"
-    BIKE="Bike"
-    TRUCK="Truck"
+    CAR="CAR"
+    BIKE="BIKE"
+    TRUCK="TRUCK"
